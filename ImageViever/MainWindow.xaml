@@ -1,0 +1,35 @@
+﻿<Window x:Class="ImageViever.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ImageViever"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="MyImage" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="3"/>
+        <Button x:Name="First" Content="Start" Grid.Row="3" Grid.Column="0" Click="First_Click"/>
+        <Button x:Name="Prev" Content="Prev" Grid.Row="3" Grid.Column="1" Click="Prev_Click"/>
+        <Button x:Name="Next" Content="Next" Grid.Row="3" Grid.Column="2" Click="Next_Click"/>
+        <Button x:Name="Last" Content="Last" Grid.Row="3" Grid.Column="3" Click="Last_Click"/>
+        <Label x:Name="Mark" Grid.Column="3" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="36"/>
+        <Label Content="Your Mark: " Grid.Column="3" Grid.Row="2" VerticalAlignment="Top" FontSize="36"/>
+        <CheckBox x:Name="FirstCheck" Grid.Column="3" Grid.Row="0" Content="1" Checked="FirstCheck_Checked"/>
+        <CheckBox x:Name="SecondCheck" Grid.Column="3" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left" Content="2" Checked="SecondCheck_Checked"/>
+        <CheckBox x:Name="ThirdCheck" Grid.Column="3" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Left" Content="3" Checked="ThirdCheck_Checked"/>
+        <CheckBox x:Name="FourthCheck" Grid.Column="3" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Content="4" Checked="FourthCheck_Checked"/>
+        <CheckBox x:Name="FifthCheck" Grid.Column="3" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Content="5" Checked="FifthCheck_Checked"/>
+    </Grid>
+</Window>
